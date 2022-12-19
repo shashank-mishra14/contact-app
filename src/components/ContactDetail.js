@@ -3,8 +3,8 @@ import{link} from "react-router-dom";
 import user from "../images/user.jpg";
 
 const ContactDetail= (props) => {
-    console.log(props);
-    
+    const {name, email}= props.location.state.contct;
+
     
   return (
           <div className="main">
@@ -13,9 +13,14 @@ const ContactDetail= (props) => {
                       <img src={user} alt="user"/>
                   </div>
                   <div className="content">
-                      <div className="header">shashank</div>
-                      <div className="description">shashank@gmail.com</div>
+                      <div className="header">{name}</div>
+                      <div className="description">{email}</div>
                   </div>
+              </div>
+              <div className="center-div">
+                 <link to ="/">
+                  <button className="ui button blue center">Back to Contact List</button>
+                  </link>
               </div>
           </div>
   );
