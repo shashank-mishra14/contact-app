@@ -6,7 +6,7 @@ class AddContact extends React.Component{
         name:"",
         email:"",
 
-    }
+    };
     add =(e) =>{
         e.preventDefault();
         if(this.state.name === "" && this.state.email === ""){
@@ -15,8 +15,10 @@ class AddContact extends React.Component{
         }
         this.props.addContactHandler(this.state);
         this.setState({ name: "", email:""});
+            this.props.history.push("/");
 
-    }
+
+    };
 render(){
     return(
 
@@ -46,7 +48,7 @@ render(){
             </form>
         </div>
     );
-}
-}
+};
+};
 
 export default AddContact;
