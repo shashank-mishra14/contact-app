@@ -40,6 +40,16 @@ class AddContact extends React.Component {
               onChange={(e) => this.setState({ email: e.target.value })}
             />
           </div>
+          <div className="field">
+            <label>Date</label>
+            <input
+              type="date"
+              name="date"
+              placeholder="Date"
+              value={this.state.date}
+              onChange={(e) => this.setState({ email: e.target.value })}
+            />
+          </div>
           <button className="ui button blue">Add</button>
         </form>
       </div>
